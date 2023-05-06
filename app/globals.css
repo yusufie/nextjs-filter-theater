@@ -7,6 +7,35 @@ body {
   padding: 0;
 }
 
+#dropdownMenu {
+}
+
+
+input[type="text"] {
+  border: 1px solid lightgray;
+  border-radius: 0px;
+  background-image: url("../public/search-icon.svg");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: 12px 12px;
+}
+
+input[type="text"]:focus {
+  border: 1px solid #FF0D87;
+  outline: none;
+}
+
+input[type="text"]::placeholder {
+ 
+  padding: 12px 28px;
+}
+
+input[type="text"]:not(:placeholder-shown) {
+  background-image: none;
+}
+
+
+
 input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -45,7 +74,7 @@ input[type="checkbox"]:checked::before {
 {/*media query for mobile devices*/}
 
 @media screen and (max-width: 600px) {
-  .relative.inline-block {
+  #searchbox {
     display: none;
   }
 }
