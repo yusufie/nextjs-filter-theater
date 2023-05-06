@@ -17,10 +17,10 @@ function SearchBox() {
   }, [searchTerm]);
 
   return (
-    <div className="relative inline-block">
+    <div className="relative inline-block" id="searchbox">
       <input
         type="text"
-        className="flex text-black py-2 px-4 rounded-md border-gray-300 focus:outline-none focus:ring focus:border-blue-300"
+        className="flex text-black py-2 px-4"
         placeholder="Etkinlik Ara"
         value={searchTerm}
         onChange={handleChange}
