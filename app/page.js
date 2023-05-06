@@ -15,6 +15,16 @@ export default function Home() {
     Fuaye: false,
   });
 
+  const [eventsData, setEventsData] = useState(events);
+
+  function handleAddToCalendar(id) {
+    setEventsData((prevEventsData) =>
+      prevEventsData.map((event) =>
+        event.id === id ? { ...event, addedToCalendar: !event.addedToCalendar } : event
+      )
+    );
+  }
+
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleDropdown = () => {
@@ -159,7 +169,7 @@ export default function Home() {
       <main className="">
         <div className="flex flex-col justify-center mt-8 ">
 
-          {events
+          {eventsData
             .filter((event) => {
               if (filters.Hall && event.locationType !== "Maximum Uniq Hall") {
                 return false;
@@ -195,7 +205,7 @@ export default function Home() {
                 </div>
 
                 <div className="w-full md:w-2/3 bg-white flex flex-col space-y-2 p-3">
-                  <h4 className="font-black text-black">{event.title}</h4>
+                  <h4 className="font-black text-black hover:text-orange-400 hover:cursor-pointer">{event.title}</h4>
 
                   <div className="flex items-center">
                     <Image
@@ -222,16 +232,19 @@ export default function Home() {
                       Bilet Al
                     </button>
 
-                    <button className="flex items-center w-40 h-7 hover:bg-gray-100 text-black font-semibold mt-2 ">
+                    <button 
+                    className="flex items-center w-40 h-7 hover:bg-gray-100 text-black font-semibold mt-2"
+                    onClick={() => handleAddToCalendar(event.id)}
+                    >
                       <Image
-                        src="/add-icon.svg"
+                        src={event.addedToCalendar ? "/tick-icon.svg" : "/add-icon.svg"}
                         alt="add"
                         className="add-icon me-2"
                         width={26}
                         height={26}
                         priority
                       />
-                      Takvime Ekle
+                      {event.addedToCalendar ? "Takvime Eklendi" : "Takvime Ekle"}
                     </button>
                   </div>
                 </div>
