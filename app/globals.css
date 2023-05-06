@@ -2,26 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid rgb(229, 16, 124);
+  border-radius: 0px;
+  height: 20px;
+  width: 20px;
+  left: 0px;
+  top: 0px;
+  outline: none;
+  font-weight: bolder;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  position: relative; /* add this to position the tick icon */
+}
+
+input[type="checkbox"]::before {
+  content: "\2713"; /* add tick icon */
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  
+  transform: translate(-50%, -50%) scale(0); /* hide the tick icon by scaling it down to zero */
+  transition: transform 0.2s ease-in-out; /* animate the tick icon */
+}
+
+input[type="checkbox"]:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+  background-color: rgb(255, 13, 135); /* show the tick icon by scaling it up to full size */
+}
+
+{/*media query for mobile devices*/}
+
+@media screen and (max-width: 600px) {
+  .relative.inline-block {
+    display: none;
+  }
 }

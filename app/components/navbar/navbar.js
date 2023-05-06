@@ -33,7 +33,7 @@ function navbar() {
         <Link href="/children">Çocuk</Link>
       </button>
      
-      <div className="">
+      <div className="flex">
         <SearchBox/>
       </div>
 
