@@ -181,16 +181,16 @@ export default function Home() {
             .map((event) => (
               <div
                 key={event.id}
-                className="relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 shadow-lg p-3 mx-auto bg-white border border-solid border-gray-500 mt-8"
+                className="relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 shadow-lg p-3 bg-white border border-solid border-gray-500 mt-8 2xl:mx-48 xl:mx-36 lg:mx-24 md:mx-12 sm:mx-6"
+                id="eventCard"
               >
-                <div className="w-full md:w-1/3 bg-white grid place-items-center">
+                <div className="md:w-1/3 grid place-items-center">
                   <Image
                     src={event.image}
                     alt="poster"
-                    className="poster ms-24"
+                    className="poster"
                     width={308}
                     height={172}
-                    priority
                   />
                 </div>
 

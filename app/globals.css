@@ -7,9 +7,21 @@ body {
   padding: 0;
 }
 
+img {
+  max-width: fit-content;
+  height: fit-content;
+}
+
+
+#eventCard {
+  background: linear-gradient(to left, white 88%, black 12%);
+}
+
+
 #dropdownMenu {
 }
 
+/* INPUT STYLES STARTS */
 
 input[type="text"] {
   border: 1px solid lightgray;
@@ -71,10 +83,20 @@ input[type="checkbox"]:checked::before {
   background-color: rgb(255, 13, 135); /* show the tick icon by scaling it up to full size */
 }
 
-{/*media query for mobile devices*/}
+ /*INPUT STYLES START*/ 
 
-@media screen and (max-width: 600px) {
+
+
+
+ /* MEDIA QUERY STARTS */
+
+@media screen and (max-width: 768px) {
   #searchbox {
     display: none;
   }
+  #eventCard {
+    background: linear-gradient(to top, white 65%, black 35%);
+  }
 }
+
+ /* MEDIA QUERY ENDS */
