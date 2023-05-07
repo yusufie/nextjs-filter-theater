@@ -221,12 +221,15 @@ export default function Home() {
                 className="relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 shadow-lg p-3 ps-28 bg-white border border-solid border-gray-300 mt-8 2xl:mx-48 xl:mx-36 lg:mx-24 md:mx-12 sm:mx-6"
                 id="eventCard"
               >
-                <div
-                  className="eventType"
-                  style={{ backgroundColor: getEventColor(event.type) }}
-                >
+                <div className="eventType" style={{ backgroundColor: getEventColor(event.type) }} >
                   <p style={{ color: "#fff" }}>{event.type.toUpperCase()}</p>
                 </div>
+
+                <div className="eventDate text-center">
+                  <div id="dateText">{event.date}</div>
+                  <div id="timeText">{event.time}</div>
+                </div>
+
 
                 <div className="md:w-1/3 grid place-items-center" id="posterContainer">
                   <Image
@@ -238,7 +241,7 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="w-full md:w-2/3 bg-white flex flex-col space-y-2 p-3">
+                <div className="w-full md:w-2/3 bg-white flex flex-col space-y-2 p-3" id="eventInformation">
                   <h4 className="font-black text-black hover:text-orange-400 hover:cursor-pointer">
                     {event.title}
                   </h4>
@@ -259,7 +262,7 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <p className=" text-black text-base">{event.description}</p>
+                  <p className=" text-black text-base" id="eventDescription">{event.description}</p>
                 </div>
 
                 <div className="w-full md:w-1/3 bg-white grid place-items-center">

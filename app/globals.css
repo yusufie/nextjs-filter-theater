@@ -15,8 +15,22 @@ img {
 
 
 #eventCard {
-  background: linear-gradient(to left, white 88%, black 12%);
+  background: linear-gradient(to left, white 80%, black 20%);
 }
+
+.eventDate {
+  position: absolute;
+  bottom: 63px;
+  top: 45px;
+  left: 37px;
+  width: 32px;
+  height: 96px;
+  color: #FF0D87;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 
 .eventType {
   position: absolute;
@@ -30,6 +44,19 @@ img {
   font-size: 14px;
   line-height: 22px;
 }
+
+  #eventInformation {
+    max-width: 416px;
+    
+  }
+
+  #eventDescription {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
 
 
 #dropdownMenu {
@@ -121,10 +148,38 @@ input[type="checkbox"]:checked::before {
     padding: 0px 20px 0px 20px;
   }
 
+
+  .eventDate {
+    display: flex;
+    justify-content: center;
+    top: 5px;
+    left: 108px;
+    width: 300px;
+    height: 40px;
+  }
+
+  #dateText {
+    margin-right: 3px;
+    color: white;
+    font-size: 24px;
+  }
+
+  #timeText {
+    margin-left: 3px;
+    color: #9C9C9C;
+    font-size: 16px;
+  }
+
+
+  #eventDescription {
+    -webkit-line-clamp: 1;
+  }
+
+
   #cardButtonsContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 10px;
     padding: 0px 20px 0px 20px;
@@ -135,4 +190,14 @@ input[type="checkbox"]:checked::before {
   }
 
 }
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #eventDescription {
+    -webkit-line-clamp: 2;
+  }
+}
+
+
+
  /* MEDIA QUERY ENDS */
