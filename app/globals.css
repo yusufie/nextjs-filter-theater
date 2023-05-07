@@ -5,6 +5,7 @@
 body {
   margin: 0;
   padding: 0;
+  /* background-color: black;  DARK MODE */
 }
 
 img {
@@ -15,6 +16,19 @@ img {
 
 #eventCard {
   background: linear-gradient(to left, white 88%, black 12%);
+}
+
+.eventType {
+  position: absolute;
+  top: 32px;
+  left: 92px;
+  gap: 10px;
+  padding: 0px 20px 0px 20px;
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 
@@ -96,7 +110,29 @@ input[type="checkbox"]:checked::before {
   }
   #eventCard {
     background: linear-gradient(to top, white 65%, black 35%);
+    padding-left: 16px;
   }
-}
 
+  .eventType {
+    position: absolute;
+    top: 16px;
+    left: 0px;
+    gap: 10px;
+    padding: 0px 20px 0px 20px;
+  }
+
+  #cardButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 20px 0px 20px;
+  }
+
+  #posterContainer {
+    margin-top: 54px;
+  }
+
+}
  /* MEDIA QUERY ENDS */
