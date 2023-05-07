@@ -1,46 +1,83 @@
-import React from 'react'
-import Link from 'next/link';
+"use client";
+import React, { useState } from "react";
+import Link from "next/link";
 
-import SearchBox from '../filter/SearchBox'
+import SearchBox from "../filter/SearchBox";
 
-function navbar() {
+function Navbar() {
+  const [activeButton, setActiveButton] = useState("concert");
+
   return (
-    <div className="mt-8 ">
+    <>
+      <div class="grid grid-cols-3 grid-flow-col justify-around">
 
-    <div className="flex justify-center items-center p-8 ">
+        <div className="flex invisible pb-8 pt-8 ">01</div>
 
-      <button className="text-base me-4">
-        <Link href="/">Tüm Etkinlikler</Link>
-      </button>
+        <div className="flex justify-center items-center pe-8 ps-8 pt-8 ">
+          <button
+            className={`text-base me-4 pb-8 ${
+              activeButton === "allActivities"
+                ? "border-b-4 border-pink-500 text-pink-500 font-bold"
+                : ""
+            }`}
+            onClick={() => setActiveButton("allActivities")}
+          >
+            <Link href="/">Tüm Etkinlikler</Link>
+          </button>
 
-      <button className="text-base me-4"> 
-        <Link href="/theatre">Tiyatro</Link>
-      </button>
+          <button
+            className={`text-base me-4 pb-8 ${
+              activeButton === "theatre" ? "border-b-4 border-pink-500 text-pink-500 font-bold" : ""
+            }`}
+            onClick={() => setActiveButton("theatre")}
+          >
+            <Link href="/theatre">Tiyatro</Link>
+          </button>
 
-      <button className="text-base me-4">
-        <Link href="/concert">Konser</Link>
-      </button>
+          <button
+            className={`text-base me-4 pb-8 ${
+              activeButton === "concert" ? "border-b-4 border-pink-500 text-pink-500 font-bold" : ""
+            }`}
+            onClick={() => setActiveButton("concert")}
+          >
+            <Link href="/concert">Konser</Link>
+          </button>
 
-      <button className="text-base me-4">
-        <Link href="/standup">Stand Up</Link>
-      </button>
+          <button
+            className={`text-base me-4 pb-8 ${
+              activeButton === "standup" ? "border-b-4 border-pink-500 text-pink-500 font-bold" : ""
+            }`}
+            onClick={() => setActiveButton("standup")}
+          >
+            <Link href="/standup">Stand Up</Link>
+          </button>
 
-      <button className="text-base me-4">
-        <Link href="/cinema">Sinema</Link>
-      </button>
+          <button
+            className={`text-base me-4 pb-8 ${
+              activeButton === "cinema" ? "border-b-4 border-pink-500 text-pink-500 font-bold" : ""
+            }`}
+            onClick={() => setActiveButton("cinema")}
+          >
+            <Link href="/cinema">Sinema</Link>
+          </button>
 
-      <button className="text-base me-4">
-        <Link href="/children">Çocuk</Link>
-      </button>
-     
-      <div className="flex">
-        <SearchBox/>
+          <button
+            className={`text-base me-4 pb-8 ${
+              activeButton === "children" ? "border-b-4 border-pink-500 text-pink-500 font-bold" : ""
+            }`}
+            onClick={() => setActiveButton("children")}
+          >
+            <Link href="/children">Çocuk</Link>
+          </button>
+        </div>
+
+        <div className="flex justify-center pb-8 pt-8">
+          <SearchBox />
+        </div>
+
       </div>
-
-    </div>
-
-  </div>
-  )
+    </>
+  );
 }
 
-export default navbar
+export default Navbar;
