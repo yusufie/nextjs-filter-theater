@@ -15,6 +15,25 @@ export default function Home() {
     Fuaye: false,
   });
 
+
+  function getEventColor(eventType) {
+    switch (eventType) {
+      case 'Konser':
+        return '#9FAE5D'
+      case 'Sinema':
+        return '#F07266'
+      case 'Tiyatro':
+        return '#B77CB8'
+      case 'Stand Up':
+        return '#F19653'
+      default:
+        return '#cccccc'
+    }
+  }
+
+
+
+
   const [eventsData, setEventsData] = useState(events);
 
   function handleAddToCalendar(id) {
@@ -34,7 +53,6 @@ export default function Home() {
   return (
     <>
       <div className="flex justify-between items-center bg-gray-200 w-full p-6 ">
-      
         {/* DROPDOWN */}
 
         <div className="relative">
@@ -61,11 +79,13 @@ export default function Home() {
               <ul>
                 <li>
                   <div className="px-8 py-2 hover:bg-gray-100">
-                    <input 
-                    type="checkbox" 
-                    className="w-5 h-5 text-pink-500"
-                    checked={filters.Hall}
-                    onChange={() => setFilters({ ...filters, Hall: !filters.Hall })}
+                    <input
+                      type="checkbox"
+                      className="w-5 h-5 text-pink-500"
+                      checked={filters.Hall}
+                      onChange={() =>
+                        setFilters({ ...filters, Hall: !filters.Hall })
+                      }
                     />
                     <label className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Maximum Uniq Hall
@@ -75,11 +95,13 @@ export default function Home() {
 
                 <li>
                   <div className="px-8 py-2 hover:bg-gray-100">
-                    <input 
-                    type="checkbox" 
-                    className="w-5 h-5 text-pink-500"
-                    checked={filters.Box}
-                    onChange={() => setFilters({ ...filters, Box: !filters.Box })}
+                    <input
+                      type="checkbox"
+                      className="w-5 h-5 text-pink-500"
+                      checked={filters.Box}
+                      onChange={() =>
+                        setFilters({ ...filters, Box: !filters.Box })
+                      }
                     />
                     <label className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Maximum Uniq Box
@@ -89,11 +111,13 @@ export default function Home() {
 
                 <li>
                   <div className="px-8 py-2 hover:bg-gray-100">
-                    <input 
-                    type="checkbox" 
-                    className="w-5 h-5 text-pink-500"
-                    checked={filters.Lounge}
-                    onChange={() => setFilters({ ...filters, Lounge: !filters.Lounge })}
+                    <input
+                      type="checkbox"
+                      className="w-5 h-5 text-pink-500"
+                      checked={filters.Lounge}
+                      onChange={() =>
+                        setFilters({ ...filters, Lounge: !filters.Lounge })
+                      }
                     />
                     <label className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Maximum Uniq Lounge
@@ -103,12 +127,14 @@ export default function Home() {
 
                 <li>
                   <div className="px-8 py-2 hover:bg-gray-100">
-                    <input 
-                    type="checkbox" 
-                    className="w-5 h-5 text-pink-500"
-                    checked={filters.Hava}
-                    onChange={() => setFilters({ ...filters, Hava: !filters.Hava })}
-                     />
+                    <input
+                      type="checkbox"
+                      className="w-5 h-5 text-pink-500"
+                      checked={filters.Hava}
+                      onChange={() =>
+                        setFilters({ ...filters, Hava: !filters.Hava })
+                      }
+                    />
                     <label className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Maximum Uniq Açıkhava
                     </label>
@@ -117,12 +143,14 @@ export default function Home() {
 
                 <li>
                   <div className="px-8 py-2 hover:bg-gray-100">
-                    <input 
-                    type="checkbox" 
-                    className="w-5 h-5 text-pink-500"
-                    checked={filters.Fuaye}
-                    onChange={() => setFilters({ ...filters, Fuaye: !filters.Fuaye })}
-                     />
+                    <input
+                      type="checkbox"
+                      className="w-5 h-5 text-pink-500"
+                      checked={filters.Fuaye}
+                      onChange={() =>
+                        setFilters({ ...filters, Fuaye: !filters.Fuaye })
+                      }
+                    />
                     <label className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Bahçe Fuaye
                     </label>
@@ -137,10 +165,7 @@ export default function Home() {
               <ul>
                 <li>
                   <div className="px-8 py-2 hover:bg-gray-100">
-                    <input 
-                    type="checkbox" 
-                    className="w-5 h-5 text-pink-500" 
-                    />
+                    <input type="checkbox" className="w-5 h-5 text-pink-500" />
                     <label className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Güncel Etkinlikler
                     </label>
@@ -148,10 +173,7 @@ export default function Home() {
                 </li>
                 <li>
                   <div className="px-8 py-2 hover:bg-gray-100">
-                    <input 
-                    type="checkbox" 
-                    className="w-5 h-5 text-pink-500"
-                    />
+                    <input type="checkbox" className="w-5 h-5 text-pink-500" />
                     <label className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Geçmiş Etkinlikler
                     </label>
@@ -168,7 +190,6 @@ export default function Home() {
 
       <main className="">
         <div className="flex flex-col justify-center mt-8 ">
-
           {eventsData
             .filter((event) => {
               if (filters.Hall && event.locationType !== "Maximum Uniq Hall") {
@@ -177,10 +198,16 @@ export default function Home() {
               if (filters.Box && event.locationType !== "Maximum Uniq Box") {
                 return false;
               }
-              if (filters.Lounge && event.locationType !== "Maximum Uniq Lounge") {
+              if (
+                filters.Lounge &&
+                event.locationType !== "Maximum Uniq Lounge"
+              ) {
                 return false;
               }
-              if (filters.Hava && event.locationType !== "Maximum Uniq Açıkhava") {
+              if (
+                filters.Hava &&
+                event.locationType !== "Maximum Uniq Açıkhava"
+              ) {
                 return false;
               }
               if (filters.Fuaye && event.locationType !== "Bahçe Fuaye") {
@@ -191,10 +218,17 @@ export default function Home() {
             .map((event) => (
               <div
                 key={event.id}
-                className="relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 shadow-lg p-3 bg-white border border-solid border-gray-500 mt-8 2xl:mx-48 xl:mx-36 lg:mx-24 md:mx-12 sm:mx-6"
+                className="relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 shadow-lg p-3 ps-28 bg-white border border-solid border-gray-300 mt-8 2xl:mx-48 xl:mx-36 lg:mx-24 md:mx-12 sm:mx-6"
                 id="eventCard"
               >
-                <div className="md:w-1/3 grid place-items-center">
+                <div
+                  className="eventType"
+                  style={{ backgroundColor: getEventColor(event.type) }}
+                >
+                  <p style={{ color: "#fff" }}>{event.type.toUpperCase()}</p>
+                </div>
+
+                <div className="md:w-1/3 grid place-items-center" id="posterContainer">
                   <Image
                     src={event.image}
                     alt="poster"
@@ -205,7 +239,9 @@ export default function Home() {
                 </div>
 
                 <div className="w-full md:w-2/3 bg-white flex flex-col space-y-2 p-3">
-                  <h4 className="font-black text-black hover:text-orange-400 hover:cursor-pointer">{event.title}</h4>
+                  <h4 className="font-black text-black hover:text-orange-400 hover:cursor-pointer">
+                    {event.title}
+                  </h4>
 
                   <div className="flex items-center">
                     <Image
@@ -227,24 +263,30 @@ export default function Home() {
                 </div>
 
                 <div className="w-full md:w-1/3 bg-white grid place-items-center">
-                  <div className="flex flex-col justify-between item-center">
+                  <div className="flex flex-col justify-between item-center" id="cardButtonsContainer">
                     <button className="w-40 h-12 bg-pink-600 hover:bg-pink-700 text-white drop-shadow-xl font-bold py-2 px-4">
                       Bilet Al
                     </button>
 
-                    <button 
-                    className="flex items-center w-40 h-7 hover:bg-gray-100 text-black font-semibold mt-2"
-                    onClick={() => handleAddToCalendar(event.id)}
+                    <button
+                      className="flex items-center w-40 h-7 hover:bg-gray-100 text-black font-semibold mt-2"
+                      onClick={() => handleAddToCalendar(event.id)}
                     >
                       <Image
-                        src={event.addedToCalendar ? "/tick-icon.svg" : "/add-icon.svg"}
+                        src={
+                          event.addedToCalendar
+                            ? "/tick-icon.svg"
+                            : "/add-icon.svg"
+                        }
                         alt="add"
                         className="add-icon me-2"
                         width={26}
                         height={26}
                         priority
                       />
-                      {event.addedToCalendar ? "Takvime Eklendi" : "Takvime Ekle"}
+                      {event.addedToCalendar
+                        ? "Takvime Eklendi"
+                        : "Takvime Ekle"}
                     </button>
                   </div>
                 </div>
