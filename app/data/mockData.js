@@ -7,7 +7,7 @@ export const events = [
     {
         "id": 1,
         "title": "BKM Yaz Etkinlikleri: Zengin Mutfağı",
-        "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde ve genç bir.... Detaylı Bilgi",
+        "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde... ",
         "location": "National Theatre, Istanbul",
         "locationType": "Maximum Uniq Lounge",
         "date": "7 Eylül",
@@ -20,7 +20,7 @@ export const events = [
       {
         "id": 2,
         "title": "Yasemin Sakallıoğlu",
-        "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde ve genç bir.... Detaylı Bilgi",
+        "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde... ",
         "location": "Madison Square Garden, New York City",
         "locationType": "Maximum Uniq Box",
         "date": "7 Eylül",
@@ -33,7 +33,7 @@ export const events = [
       {
         "id": 3,
         "title": "Sinema Keyfi: Rifkin’s Festival",
-        "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde ve genç bir.... Detaylı Bilgi",
+        "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde... ",
         "location": "The Comedy Cellar, Los Angeles",
         "locationType": "Maximum Uniq Box",
         "date": "7 Eylül",
@@ -46,7 +46,7 @@ export const events = [
       {
         "id": 4,
         "title": "Sinema: The Godfather",
-        "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde ve genç bir.... Detaylı Bilgi",
+        "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde... ",
         "location": "Cineplex, Paris",
         "locationType": "Maximum Uniq Box",
         "date": "7 Eylül",
@@ -59,7 +59,7 @@ export const events = [
       {
         "id": 5,
         "title": "Çocuk: Disneyland Adventure",
-        "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde ve genç bir.... Detaylı Bilgi",
+        "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde... ",
         "location": "Disneyland, Anaheim",
         "locationType": "Maximum Uniq Hall",
         "date": "7 Eylül",
@@ -72,7 +72,7 @@ export const events = [
       {
         "id": 6,
         "title": "Tiyatro: Othello",
-        "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde ve genç bir.... Detaylı Bilgi",
+        "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde... ",
         "location": "Globe Theatre, London",
         "locationType": "Maximum Uniq Hall",
         "date": "7 Eylül",
@@ -85,7 +85,7 @@ export const events = [
       {
           "id": 7,
           "title": "Konser: Beyoncé",
-          "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde ve genç bir.... Detaylı Bilgi",
+          "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde... ",
           "location": "Wembley Stadium, London",
           "locationType": "Maximum Uniq Box",
           "date": "7 Eylül",
@@ -98,7 +98,7 @@ export const events = [
       {
           "id": 8,
           "title": "Stand Up: Ali Wong",
-          "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde ve genç bir.... Detaylı Bilgi",
+          "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde... ",
           "location": "The Laugh Factory, Chicago",
           "locationType": "Maximum Uniq Lounge",
           "date": "7 Eylül",
@@ -111,7 +111,7 @@ export const events = [
       {
           "id": 9,
           "title": "Sinema: The Shawshank Redemption",
-          "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde ve genç bir.... Detaylı Bilgi",
+          "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde... ",
           "location": "Cinéma Paradiso, Rome",
           "locationType": "Maximum Uniq Açıkhava",
           "date": "7 Eylül",
@@ -124,7 +124,7 @@ export const events = [
       {
           "id": 10,
           "title": "Çocuk: Toy Story Adventure",
-          "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde ve genç bir.... Detaylı Bilgi",
+          "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde... ",
           "location": "Disney World, Orlando",
           "locationType": "Bahçe Fuaye",
           "date": "7 Eylül",
@@ -137,7 +137,7 @@ export const events = [
       {
           "id": 11,
           "title": "Tiyatro: Romeo and Juliet",
-          "description": "A theatrical production of Shakespeare's Romeo and Juliet by the Royal Shakespeare Company in Stratford-upon-Avon .... Detaylı Bilgi",
+          "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde... ",
           "location": "The Globe, Tokyo",
           "locationType": "Maximum Uniq Hall",
           "date": "7 Eylül",
@@ -150,7 +150,7 @@ export const events = [
       {
           "id": 12,
           "title": "Konser: Coldplay",
-          "description": "A live performance by Coldplay",
+          "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde... ",
           "location": "O2 Arena, London",
           "locationType": "Maximum Uniq Box",
           "date": "7 Eylül",
@@ -163,7 +163,7 @@ export const events = [
       {
           "id": 13,
           "title": "Stand Up: Hasan Minhaj",
-          "description": "A hilarious stand up comedy show by Hasan Minhaj",
+          "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde... ",
           "location": "The Comedy Cellar, New York",
           "locationType": "Maximum Uniq Lounge",
           "date": "7 Eylül",
@@ -176,7 +176,7 @@ export const events = [
       {
           "id": 14,
           "title": "Sinema: The Godfather",
-          "description": "A screening of the classic movie The Godfather",
+          "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde... ",
           "location": "Cinecittà Studios, Rome",
           "locationType": "Maximum Uniq Açıkhava",
           "date": "7 Eylül",
@@ -189,7 +189,7 @@ export const events = [
       {
           "id": 15,
           "title": "Çocuk: Circus Adventure",
-          "description": "A fun circus adventure for kids and families",
+          "description": "1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde... ",
           "location": "Cirque du Soleil, Las Vegas",
           "locationType": "Bahçe Fuaye",
           "date": "7 Eylül",

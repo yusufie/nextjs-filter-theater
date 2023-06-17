@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { events } from "../app/data/mockData";
 
-import CalendarButton from '../app/components/filter/CalendarButton';
-
+import CalendarButton from "../app/components/filter/CalendarButton";
 
 export default function Home() {
   const [filters, setFilters] = useState({
@@ -15,40 +14,54 @@ export default function Home() {
     Fuaye: false,
   });
 
-
   function getEventColor(eventType) {
     switch (eventType) {
-      case 'Konser':
-        return '#9FAE5D'
-      case 'Sinema':
-        return '#F07266'
-      case 'Tiyatro':
-        return '#B77CB8'
-      case 'Stand Up':
-        return '#F19653'
+      case "Konser":
+        return "#9FAE5D";
+      case "Sinema":
+        return "#F07266";
+      case "Tiyatro":
+        return "#B77CB8";
+      case "Stand Up":
+        return "#F19653";
       default:
-        return '#cccccc'
+        return "#cccccc";
     }
   }
-
-
-
 
   const [eventsData, setEventsData] = useState(events);
 
   function handleAddToCalendar(id) {
     setEventsData((prevEventsData) =>
       prevEventsData.map((event) =>
-        event.id === id ? { ...event, addedToCalendar: !event.addedToCalendar } : event
+        event.id === id
+          ? { ...event, addedToCalendar: !event.addedToCalendar }
+          : event
       )
     );
   }
 
-  const [isOpen, setIsOpen] = useState(false)
+  function handleExpandDescription(id) {
+    setEventsData((prevEventsData) =>
+      prevEventsData.map((event) =>
+        event.id === id ? { ...event, isExpanded: true } : event
+      )
+    );
+  }
+
+  function handleCollapseDescription(id) {
+    setEventsData((prevEventsData) =>
+      prevEventsData.map((event) =>
+        event.id === id ? { ...event, isExpanded: false } : event
+      )
+    );
+  }
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   return (
     <>
@@ -221,7 +234,10 @@ export default function Home() {
                 className="relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 shadow-lg p-3 ps-28 bg-white border border-solid border-gray-300 mt-8 2xl:mx-48 xl:mx-36 lg:mx-24 md:mx-12 sm:mx-6"
                 id="eventCard"
               >
-                <div className="eventType" style={{ backgroundColor: getEventColor(event.type) }} >
+                <div
+                  className="eventType"
+                  style={{ backgroundColor: getEventColor(event.type) }}
+                >
                   <p style={{ color: "#fff" }}>{event.type.toUpperCase()}</p>
                 </div>
 
@@ -230,8 +246,10 @@ export default function Home() {
                   <div id="timeText">{event.time}</div>
                 </div>
 
-
-                <div className="md:w-1/3 grid place-items-center" id="posterContainer">
+                <div
+                  className="md:w-1/3 grid place-items-center"
+                  id="posterContainer"
+                >
                   <Image
                     src={event.image}
                     alt="poster"
@@ -241,7 +259,10 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="w-full md:w-2/3 bg-white flex flex-col space-y-2 p-3" id="eventInformation">
+                <div
+                  className="w-full md:w-2/3 bg-white flex flex-col space-y-2 p-3"
+                  id="eventInformation"
+                >
                   <h4 className="font-black text-black hover:text-orange-400 hover:cursor-pointer">
                     {event.title}
                   </h4>
@@ -262,11 +283,38 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <p className=" text-black text-base" id="eventDescription">{event.description}</p>
+                  <div className="inline">
+                    <div
+                      className={`inline description ${
+                        event.isExpanded ? "expanded" : ""
+                      }`}
+                      id="eventDescription"
+                    >
+                      <span className="text">{event.description}</span>
+                      {event.isExpanded ? (
+                        <span
+                          className="readmore-btn inline"
+                          onClick={() => handleCollapseDescription(event.id)}
+                        >
+                          Daha az göster
+                        </span>
+                      ) : (
+                        <span
+                          className="readmore-btn inline"
+                          onClick={() => handleExpandDescription(event.id)}
+                        >
+                          Detaylı Bilgi
+                        </span>
+                      )}
+                    </div>
+                  </div>
                 </div>
 
                 <div className="w-full md:w-1/3 bg-white grid place-items-center">
-                  <div className="flex flex-col justify-between item-center" id="cardButtonsContainer">
+                  <div
+                    className="flex flex-col justify-between item-center"
+                    id="cardButtonsContainer"
+                  >
                     <button className="w-40 h-12 bg-pink-600 hover:bg-pink-700 text-white drop-shadow-xl font-bold py-2 px-4">
                       Bilet Al
                     </button>

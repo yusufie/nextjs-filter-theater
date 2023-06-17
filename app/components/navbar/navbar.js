@@ -9,7 +9,7 @@ function Navbar() {
 
   return (
     <>
-      <div class="grid grid-cols-3 grid-flow-col justify-around">
+      <div className="grid grid-cols-3 grid-flow-col justify-around">
 
         <div className="flex invisible pb-8 pt-8 ">01</div>
 

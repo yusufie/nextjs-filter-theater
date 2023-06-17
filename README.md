@@ -1,19 +1,31 @@
-## Next.js Filter Events App
+# Filter Events Live Demo
+https://nextjs-filter-theater.vercel.app/
 
-This is a web application built with Next.js that allows users to filter events based on certain criteria. The project utilizes several technologies, including React, TailwindCSS, and the React Big Calendar library.
+# Figma Design
+https://www.figma.com/file/RCFuWeQb0wufE167cPYi28/Filter-Theatre-Desing?type=design&t=RyMbuRMZOmEFic0f-0
+
+## Filter Events App
+
+This is a web application built with Next.js that allows users to filter events based on certain criteria. The project utilizes several technologies, including React, TailwindCSS.
 
 ### Technologies Used
 - React
 - TailwindCSS
 - Next.js
-- React Big Calendar
-- Moment.js
 
 ### Installation
 To run this project locally, please follow these instructions:
 
 1. Clone the repository to your local machine.
+   ```shell
+   git clone https://github.com/yusufie/nextjs-filter-theater.git
+    ```
+
 2. Navigate to the project directory in your terminal.
+    ```shell
+    cd nextjs-filter-theater
+    ```
+
 3. Install dependencies using the following command: 
 ```bash
 npm install
