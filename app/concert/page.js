@@ -1,14 +1,14 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
-import { events } from '../data/mockData';
+// import { events } from '../data/mockData';
 
 import Dropdown from '../components/filter/Dropdown';
 import CalendarButton from '../components/filter/CalendarButton'; 
 
 function Concert() {
 
-  const concertEvents = events.filter((event) => event.type === 'Konser');
+  // const concertEvents = events.filter((event) => event.type === 'Konser');
 
   return (
 
@@ -21,8 +21,9 @@ function Concert() {
       </div>
    
     <div className="flex flex-col justify-center mt-8 ">
+    <h1>Concert Page</h1>
 
-    {concertEvents.map((event) => (
+   {/*  {concertEvents.map((event) => (
 
       <div
                 key={event.id}
@@ -83,7 +84,7 @@ function Concert() {
               </div>
 
     ))}
-
+ */}
   </div>
 </>
 )

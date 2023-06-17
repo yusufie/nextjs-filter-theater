@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
-import { events } from '../data/mockData';
+// import { events } from '../data/mockData';
 
 import Dropdown from '../components/filter/Dropdown';
 import CalendarButton from '../components/filter/CalendarButton'; 
@@ -9,7 +9,7 @@ import CalendarButton from '../components/filter/CalendarButton';
 
 function StandUp() {
 
-  const standupEvents = events.filter((event) => event.type === 'Stand Up');
+  // const standupEvents = events.filter((event) => event.type === 'Stand Up');
 
   return (
    
@@ -24,8 +24,9 @@ function StandUp() {
 
 
     <div className="flex flex-col justify-center mt-8 ">
+      <h1>Stand Up Page</h1>
 
-    {standupEvents.map((event) => (
+    {/* {standupEvents.map((event) => (
 
       <div
                 key={event.id}
@@ -85,7 +86,8 @@ function StandUp() {
                 </div>
               </div>
 
-    ))}
+    ))} 
+    */}
 
   </div>
 </>

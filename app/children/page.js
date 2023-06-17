@@ -1,14 +1,14 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
-import { events } from '../data/mockData';
+// import { events } from '../data/mockData';
 
 import Dropdown from '../components/filter/Dropdown';
 import CalendarButton from '../components/filter/CalendarButton'; 
 
 function Children() {
 
-  const childrenEvents = events.filter((event) => event.type === 'Çocuk');
+  // const childrenEvents = events.filter((event) => event.type === 'Çocuk');
 
   return (
 
@@ -22,6 +22,8 @@ function Children() {
    
     <div className="flex flex-col justify-center mt-8 ">
 
+    <h1>Children Page</h1>
+{/* 
     {childrenEvents.map((event) => (
 
       <div
@@ -83,7 +85,7 @@ function Children() {
               </div>
 
     ))}
-
+ */}
   </div>
 </>
 )
